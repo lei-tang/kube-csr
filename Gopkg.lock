@@ -2,6 +2,35 @@
 
 
 [[projects]]
+  digest = "1:80004fcc5cf64e591486b3e11b406f1e0d17bf85d475d64203c8494f5da4fcd1"
+  name = "cloud.google.com/go"
+  packages = ["compute/metadata"]
+  pruneopts = "UT"
+  revision = "775730d6e48254a2430366162cf6298e5368833c"
+  version = "v0.39.0"
+
+[[projects]]
+  digest = "1:7982ea3cb0b6da119282ea5e2acc7c3d7a3fd918d0efc8fa3b3cab0ae44b3f84"
+  name = "github.com/JulienBalestra/kube-csr"
+  packages = [
+    "cmd",
+    "pkg/operation",
+    "pkg/operation/approve",
+    "pkg/operation/fetch",
+    "pkg/operation/generate",
+    "pkg/operation/purge",
+    "pkg/operation/query",
+    "pkg/operation/submit",
+    "pkg/renew",
+    "pkg/utils/api",
+    "pkg/utils/kubeclient",
+    "pkg/utils/pemio",
+  ]
+  pruneopts = "UT"
+  revision = "672c27d23f6374190d5147ead031ddbe82f915b2"
+  version = "0.5.0"
+
+[[projects]]
   branch = "master"
   digest = "1:d6afaeed1502aa28e80a4ed0981d570ad91b2579193404256ce672ed0a609e0d"
   name = "github.com/beorn7/perks"
@@ -352,10 +381,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:93e22926f699f67a297fad17178ab8d26662fb0b541c40a2ae3c21416186f1f8"
+  digest = "1:47da950ccc7944be60514cbc1537181dcf4c5ca7d20725bb266b242b3636ec6a"
   name = "golang.org/x/net"
   packages = [
     "context",
+    "context/ctxhttp",
     "http/httpguts",
     "http2",
     "http2/hpack",
@@ -363,6 +393,20 @@
   ]
   pruneopts = "UT"
   revision = "dfa909b99c79129e1100513e5cd36307665e5723"
+
+[[projects]]
+  branch = "master"
+  digest = "1:645cb780e4f3177111b40588f0a7f5950efcfb473e7ff41d8d81b2ba5eaa6ed5"
+  name = "golang.org/x/oauth2"
+  packages = [
+    ".",
+    "google",
+    "internal",
+    "jws",
+    "jwt",
+  ]
+  pruneopts = "UT"
+  revision = "9f3314589c9a9136388751d9adae6b0ed400978a"
 
 [[projects]]
   branch = "master"
@@ -405,6 +449,25 @@
   packages = ["rate"]
   pruneopts = "UT"
   revision = "fbb02b2291d28baffd63558aa44b4b56f178d650"
+
+[[projects]]
+  digest = "1:ae8b6cd1af38908c84050254b3fe998dcf6926c6e85d8e504a7402ab32da4569"
+  name = "google.golang.org/appengine"
+  packages = [
+    ".",
+    "internal",
+    "internal/app_identity",
+    "internal/base",
+    "internal/datastore",
+    "internal/log",
+    "internal/modules",
+    "internal/remote_api",
+    "internal/urlfetch",
+    "urlfetch",
+  ]
+  pruneopts = "UT"
+  revision = "4c25cacc810c02874000e4f7071286a8e96b2515"
+  version = "v1.6.0"
 
 [[projects]]
   digest = "1:2d1fbdc6777e5408cabeb02bf336305e724b925ff4546ded0fa8715a7267922a"
@@ -505,7 +568,7 @@
   version = "kubernetes-1.10.0"
 
 [[projects]]
-  digest = "1:0a4e3d4f41939942aa81b5900cd8332def6f529f2f286e521cc54d6d7874dbb8"
+  digest = "1:77d0c2fa46adcd9ed50fd9be21366cbb80cb7af6cbf06a0a4695f1d78aad6ad7"
   name = "k8s.io/client-go"
   packages = [
     "discovery",
@@ -543,8 +606,10 @@
     "pkg/apis/clientauthentication/v1alpha1",
     "pkg/version",
     "plugin/pkg/client/auth/exec",
+    "plugin/pkg/client/auth/gcp",
     "rest",
     "rest/watch",
+    "third_party/forked/golang/template",
     "tools/auth",
     "tools/clientcmd",
     "tools/clientcmd/api",
@@ -557,6 +622,7 @@
     "util/flowcontrol",
     "util/homedir",
     "util/integer",
+    "util/jsonpath",
   ]
   pruneopts = "UT"
   revision = "23781f4d6632d88e869066eaebb743857aa1ef9b"
@@ -566,6 +632,18 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/JulienBalestra/kube-csr/cmd",
+    "github.com/JulienBalestra/kube-csr/pkg/operation",
+    "github.com/JulienBalestra/kube-csr/pkg/operation/approve",
+    "github.com/JulienBalestra/kube-csr/pkg/operation/fetch",
+    "github.com/JulienBalestra/kube-csr/pkg/operation/generate",
+    "github.com/JulienBalestra/kube-csr/pkg/operation/purge",
+    "github.com/JulienBalestra/kube-csr/pkg/operation/query",
+    "github.com/JulienBalestra/kube-csr/pkg/operation/submit",
+    "github.com/JulienBalestra/kube-csr/pkg/renew",
+    "github.com/JulienBalestra/kube-csr/pkg/utils/api",
+    "github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient",
+    "github.com/JulienBalestra/kube-csr/pkg/utils/pemio",
     "github.com/golang/glog",
     "github.com/gorilla/mux",
     "github.com/prometheus/client_golang/prometheus",
@@ -581,6 +659,7 @@
     "k8s.io/apimachinery/pkg/util/uuid",
     "k8s.io/client-go/kubernetes",
     "k8s.io/client-go/kubernetes/typed/certificates/v1beta1",
+    "k8s.io/client-go/plugin/pkg/client/auth/gcp",
     "k8s.io/client-go/rest",
     "k8s.io/client-go/tools/clientcmd",
   ]
