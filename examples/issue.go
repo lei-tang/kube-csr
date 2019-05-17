@@ -6,13 +6,13 @@ import (
 	"path"
 	"time"
 
-	"github.com/JulienBalestra/kube-csr/pkg/operation"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/approve"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/fetch"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/generate"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/purge"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/query"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/submit"
+	"github.com/lei-tang/kube-csr/pkg/operation"
+	"github.com/lei-tang/kube-csr/pkg/operation/approve"
+	"github.com/lei-tang/kube-csr/pkg/operation/fetch"
+	"github.com/lei-tang/kube-csr/pkg/operation/generate"
+	"github.com/lei-tang/kube-csr/pkg/operation/purge"
+	"github.com/lei-tang/kube-csr/pkg/operation/query"
+	"github.com/lei-tang/kube-csr/pkg/operation/submit"
 )
 
 func main() {

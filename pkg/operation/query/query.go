@@ -7,7 +7,7 @@ import (
 
 	"github.com/golang/glog"
 
-	"github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient"
+	"github.com/lei-tang/kube-csr/pkg/utils/kubeclient"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"strings"

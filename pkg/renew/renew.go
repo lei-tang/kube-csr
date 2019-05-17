@@ -15,9 +15,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"k8s.io/apimachinery/pkg/util/uuid"
 
-	"github.com/JulienBalestra/kube-csr/pkg/operation"
-	"github.com/JulienBalestra/kube-csr/pkg/utils/api"
-	"github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient"
+	"github.com/lei-tang/kube-csr/pkg/operation"
+	"github.com/lei-tang/kube-csr/pkg/utils/api"
+	"github.com/lei-tang/kube-csr/pkg/utils/kubeclient"
 	"strings"
 )
 

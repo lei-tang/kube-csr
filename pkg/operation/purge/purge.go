@@ -15,9 +15,9 @@ import (
 	certificates "k8s.io/api/certificates/v1beta1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/JulienBalestra/kube-csr/pkg/operation/fetch"
-	"github.com/JulienBalestra/kube-csr/pkg/utils/api"
-	"github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient"
+	"github.com/lei-tang/kube-csr/pkg/operation/fetch"
+	"github.com/lei-tang/kube-csr/pkg/utils/api"
+	"github.com/lei-tang/kube-csr/pkg/utils/kubeclient"
 )
 
 // Config contains purge functions and the grace period

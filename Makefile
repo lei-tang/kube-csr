@@ -60,7 +60,7 @@ sha512sum: $(NAME)
 	$@ ./$^ > $^.$@
 
 $(NAME)-docker:
-	docker run --rm --net=host -v $(PWD):/go/src/github.com/JulienBalestra/kube-csr -w /go/src/github.com/JulienBalestra/kube-csr golang:1.10 make
+	docker run --rm --net=host -v $(PWD):/go/src/github.com/lei-tang/kube-csr -w /go/src/github.com/lei-tang/kube-csr golang:1.10 make
 
 ci-e2e:
 	./.ci/e2e.sh

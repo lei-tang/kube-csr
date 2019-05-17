@@ -73,7 +73,7 @@ spec:
       serviceAccountName: metrics-server
       initContainers:
       - name: kube-csr
-        image: quay.io/julienbalestra/kube-csr:master
+        image: quay.io/lei-tang/kube-csr:master
         command:
         - /usr/local/bin/kube-csr
         - issue
@@ -146,7 +146,7 @@ spec:
           mountPath: /etc/certs
 
       - name: kube-csr-renew
-        image: quay.io/julienbalestra/kube-csr:master
+        image: quay.io/lei-tang/kube-csr:master
         command:
         - /usr/local/bin/kube-csr
         - issue

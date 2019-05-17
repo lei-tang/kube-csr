@@ -75,7 +75,7 @@ spec:
       terminationGracePeriodSeconds: 10
       initContainers:
       - name: kube-csr
-        image: quay.io/julienbalestra/kube-csr:master
+        image: quay.io/lei-tang/kube-csr:master
         command:
         - /usr/local/bin/kube-csr
         - issue

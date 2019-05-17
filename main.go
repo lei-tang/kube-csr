@@ -6,7 +6,7 @@ import (
 
 	"github.com/golang/glog"
 
-	"github.com/JulienBalestra/kube-csr/cmd"
+	"github.com/lei-tang/kube-csr/cmd"
 )
 
 func init() {

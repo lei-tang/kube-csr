@@ -1,7 +1,7 @@
 package approve
 
 import (
-	"github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient"
+	"github.com/lei-tang/kube-csr/pkg/utils/kubeclient"
 	"github.com/golang/glog"
 	certificates "k8s.io/api/certificates/v1beta1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"

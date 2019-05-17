@@ -17,7 +17,7 @@ import (
 	"github.com/golang/glog"
 	"github.com/spf13/cobra/doc"
 
-	"github.com/JulienBalestra/kube-csr/cmd"
+	"github.com/lei-tang/kube-csr/cmd"
 )
 
 func init() {

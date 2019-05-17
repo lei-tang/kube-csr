@@ -24,7 +24,7 @@ before_install:
 install:
   # Override the latest tag by the current branch, in the store.
   # TODO: use the image built by quay for this branch
-  - sudo docker build -t quay.io/julienbalestra/kube-csr:master .
+  - sudo docker build -t quay.io/lei-tang/kube-csr:master .
 
   - sudo apt-get install -yq systemd curl autopoint openssl
   - ls -l ~/util-linux/nsenter || bash -xec "mkdir -pv ~/util-linux && curl -Lf https://www.kernel.org/pub/linux/utils/util-linux/v2.24/util-linux-2.24.1.tar.gz | tar -xz --strip-component 1 -C ~/util-linux && ~/util-linux/autogen.sh && pushd ~/util-linux/ && ./configure --without-python --disable-all-programs --enable-nsenter && popd"

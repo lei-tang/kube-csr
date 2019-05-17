@@ -4,11 +4,11 @@ templates:
   job_template: &job_template
     docker:
       - image: golang:1.10
-    working_directory: /go/src/github.com/JulienBalestra/kube-csr
+    working_directory: /go/src/github.com/lei-tang/kube-csr
 
   machine_job_template: &machine_job_template
     machine: true
-    working_directory: /home/circleci/.go_workspace/src/github.com/JulienBalestra/kube-csr
+    working_directory: /home/circleci/.go_workspace/src/github.com/lei-tang/kube-csr
     environment:
       DEBIAN_FRONTEND: "noninteractive"
       CFLAGS: ""
@@ -74,7 +74,7 @@ jobs:
           name: docker-image
           # Override the master tag by the current branch, in the store.
           # TODO: use the image built by quay for this branch
-          command: sudo docker build -t quay.io/julienbalestra/kube-csr:master .
+          command: sudo docker build -t quay.io/lei-tang/kube-csr:master .
       - run:
           name: make
           command: make kube-csr-docker

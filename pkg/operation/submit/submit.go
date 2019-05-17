@@ -8,8 +8,8 @@ import (
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/JulienBalestra/kube-csr/pkg/operation/generate"
-	"github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient"
+	"github.com/lei-tang/kube-csr/pkg/operation/generate"
+	"github.com/lei-tang/kube-csr/pkg/utils/kubeclient"
 )
 
 // Config contains

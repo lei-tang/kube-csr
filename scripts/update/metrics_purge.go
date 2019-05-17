@@ -8,7 +8,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/JulienBalestra/kube-csr/pkg/operation/purge"
+	"github.com/lei-tang/kube-csr/pkg/operation/purge"
 	"github.com/golang/glog"
 	"github.com/prometheus/client_golang/prometheus"
 	"os"

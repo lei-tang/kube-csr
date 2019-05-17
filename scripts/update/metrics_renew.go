@@ -8,7 +8,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/JulienBalestra/kube-csr/pkg/renew"
+	"github.com/lei-tang/kube-csr/pkg/renew"
 	"github.com/golang/glog"
 	"github.com/prometheus/client_golang/prometheus"
 	"os"

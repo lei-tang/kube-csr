@@ -10,27 +10,6 @@
   version = "v0.39.0"
 
 [[projects]]
-  digest = "1:7982ea3cb0b6da119282ea5e2acc7c3d7a3fd918d0efc8fa3b3cab0ae44b3f84"
-  name = "github.com/JulienBalestra/kube-csr"
-  packages = [
-    "cmd",
-    "pkg/operation",
-    "pkg/operation/approve",
-    "pkg/operation/fetch",
-    "pkg/operation/generate",
-    "pkg/operation/purge",
-    "pkg/operation/query",
-    "pkg/operation/submit",
-    "pkg/renew",
-    "pkg/utils/api",
-    "pkg/utils/kubeclient",
-    "pkg/utils/pemio",
-  ]
-  pruneopts = "UT"
-  revision = "672c27d23f6374190d5147ead031ddbe82f915b2"
-  version = "0.5.0"
-
-[[projects]]
   branch = "master"
   digest = "1:d6afaeed1502aa28e80a4ed0981d570ad91b2579193404256ce672ed0a609e0d"
   name = "github.com/beorn7/perks"
@@ -632,18 +611,6 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/JulienBalestra/kube-csr/cmd",
-    "github.com/JulienBalestra/kube-csr/pkg/operation",
-    "github.com/JulienBalestra/kube-csr/pkg/operation/approve",
-    "github.com/JulienBalestra/kube-csr/pkg/operation/fetch",
-    "github.com/JulienBalestra/kube-csr/pkg/operation/generate",
-    "github.com/JulienBalestra/kube-csr/pkg/operation/purge",
-    "github.com/JulienBalestra/kube-csr/pkg/operation/query",
-    "github.com/JulienBalestra/kube-csr/pkg/operation/submit",
-    "github.com/JulienBalestra/kube-csr/pkg/renew",
-    "github.com/JulienBalestra/kube-csr/pkg/utils/api",
-    "github.com/JulienBalestra/kube-csr/pkg/utils/kubeclient",
-    "github.com/JulienBalestra/kube-csr/pkg/utils/pemio",
     "github.com/golang/glog",
     "github.com/gorilla/mux",
     "github.com/prometheus/client_golang/prometheus",
